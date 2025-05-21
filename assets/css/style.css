@@ -2,6 +2,18 @@ body {
     background-color: rgb(158, 90, 7);
 }
 
+#sec1 {
+    background-color: rgb(112, 21, 48);
+}
+
+#sec2 {
+    background-color: rgb(223, 219, 18);
+}
+
+#sec3 {
+    background-color: rgb(255, 156, 9);
+}
+
 
 footer {
   background-color: black;
