@@ -1,9 +1,9 @@
 body {
   background-color: rgb(158, 90, 7);
 }
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 * {
   margin: 0;
@@ -26,7 +26,7 @@ header {
   z-index: 1000;
 }
 header a {
-    color: rgb(218, 198, 172);
+    color: rgb(240, 181, 105);
 }
 
 section {
