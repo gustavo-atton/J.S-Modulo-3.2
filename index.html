@@ -16,16 +16,52 @@
       </nav>
     </header>
     <div>
+
+      <!-- SECCION 01 -->
       <section id="sec1">
         <h1>Ejercicio 1</h1>
         <h2>Selecciona la imagen haciendo click!</h2>
-        <img id="imgbr" class="imgborde" src="./assets/img/IMG-20231013-WA0012.jpg" alt="" >
+        <img
+          id="imgbr"
+          class="imgborde"
+          src="./assets/img/IMG-20231013-WA0012.jpg"
+          alt=""
+        />
       </section>
+
+        <!-- SECCION 02 -->
 
       <section id="sec2">
         <h1>Ejercicio 2</h1>
-        <h2>Selecciona hasta 10 stickers</h2>
+        <h2>Selecciona hasta <strong>10</strong> stickers</h2>
+        <div class="stickers">
+          <div class="imgstickers">
+            <img src="/assets/img/sticker01.jpeg" alt="" />
+            <input id="opcion1" type="number" min="0" />
+          </div>
+          <div class="imgstickers">
+            <img src="/assets/img/sticker02.jpeg" alt="" />
+            <input id="opcion2" type="number" min="0" />
+          </div>
+          <div class="imgstickers">
+            <img src="/assets/img/sticker03.webp" alt="" />
+            <input id="opcion3" type="number" min="0" />
+          </div>
+        </div>
+
+        <div class="cajadeconteo">
+          <p id="mensaje">"__________"</p>
+
+          <p>Stickers Seleccionados <span id="nrospan">0</span></p>
+
+          <button id="btnverificado">Verificar</button>
+        </div>
+
+  
+
       </section>
+
+        <!-- SECCION 03 -->
 
       <section id="sec3">
         <h1>Ejercicio 3</h1>
