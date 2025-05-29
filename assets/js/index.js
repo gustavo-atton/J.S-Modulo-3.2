@@ -1,29 +1,26 @@
 //01IMAGEN
 
-let borderojo =  document.getElementById("imgbr");
+let borderojo = document.getElementById("imgbr");
 
-borderojo.addEventListener("click", function (borde)
-
-{
-    if(borderojo.style.border == "2px solid red"){borderojo.style.border = 'none'}
-    else{borderojo.style.border = "2px solid red" }
-} );
-
-
-
-
+borderojo.addEventListener("click", function (borde) {
+  if (borderojo.style.border == "2px solid red") {
+    borderojo.style.border = "none";
+  } else {
+    borderojo.style.border = "2px solid red";
+  }
+});
 
 //02 SELECCION DE STICKER
 
-let btnverificado = document.querySelector('#btnverificado');
-let mensaje = document.querySelector('#mensaje');
-let nrospan = document.querySelector('#nrospan');
+let btnverificado = document.querySelector("#btnverificado");
+let mensaje = document.querySelector("#mensaje");
+let nrospan = document.querySelector("#nrospan");
 
-btnverificado.addEventListener('click', function verificar() {
+btnverificado.addEventListener("click", function verificar() {
   // Leer valores actualizados al hacer clic
-  let opcion1 = Number(document.querySelector('#opcion1').value);
-  let opcion2 = Number(document.querySelector('#opcion2').value);
-  let opcion3 = Number(document.querySelector('#opcion3').value);
+  let opcion1 = Number(document.querySelector("#opcion1").value);
+  let opcion2 = Number(document.querySelector("#opcion2").value);
+  let opcion3 = Number(document.querySelector("#opcion3").value);
 
   let conteototal = opcion1 + opcion2 + opcion3;
 
@@ -46,7 +43,7 @@ btnverificado.addEventListener('click', function verificar() {
     mensaje.style.color = "black";
     mensaje.style.fontWeight = "normal";
     mensaje.style.fontSize = "20px";
-  }  else {
+  } else {
     mensaje.innerText = "No has seleccionado ningún sticker.";
     mensaje.style.color = "black";
     mensaje.style.fontWeight = "normal";
@@ -54,91 +51,28 @@ btnverificado.addEventListener('click', function verificar() {
   }
 });
 
-
-
-
-
-/* vladi */
-
-/* let totalQty = 0;
-const btnVerify = document.querySelector("#btnVerify");
-//const inputs = document.querySelectorAll(".inputQty");
-const input1 = document.querySelector('input[name="input1"]');
-const input2 = document.querySelector('input[name="input2"]');
-const input3 = document.querySelector('input[name="input3"]');
-
-const msg = document.querySelector(".msg");
-
-btnVerify.addEventListener('click', function(event) {
-  totalQty = parseInt(input1.value) + parseInt(input2.value) + parseInt(input3.value);} */
-
-
-  //Giordan
-
- /*  const inputA = document.getElementById("bichoA");
-const inputB = document.getElementById("bichoB");
-const inputC = document.getElementById("bichoC");
-let conteo = document.getElementById("conteo");
-let contadorTotal = 0;
-let check = document.getElementById("mensaje");
-
-inputA.addEventListener("input", actualizarTotal);
-inputB.addEventListener("input", actualizarTotal);
-inputC.addEventListener("input", actualizarTotal);
-
-function actualizarTotal() {
-  contadorTotal = suma(inputA, inputB, inputC);
-
-  conteo.innerText = contadorTotal;
-}
-
-function suma(a, b, c) {
-  console.log(a);
-  const sumaTotal = Number(a.value) + Number(b.value) + Number(c.value);
-  return sumaTotal > 0 ? sumaTotal : 0;
-}
-
-function verificar() {
-  if (contadorTotal > 10) {
-    check.innerText = "Llevas demasiados bichos";
-    check.style.color = "red";
-    check.style.fontWeight = "bold";
-    check.style.fontSize = "20px";
-  } else if (contadorTotal > 1 && contadorTotal <= 10) {
-    check.innerText = `Estás llevando ${contadorTotal} bichos`;
-    check.style.color = "black";
-    check.style.fontWeight = "normal";
-    check.style.fontSize = "20px";
-  } else if (contadorTotal == 1) {
-    check.innerText = "Estas llevando 1 bicho";
-    check.style.color = "black";
-    check.style.fontWeight = "normal";
-    check.style.fontSize = "20px";
-  } else {
-    check.innerText = "No has seleccionado bichos.";
-    check.style.color = "black";
-    check.style.fontWeight = "normal";
-    check.style.fontSize = "20px";
-  }
-} */
-
-
-
-
-
-
-
 //03 INGRESA PASSWORD
 
+function verificaclave() {
+  const nro1 = document.getElementById("nro1").value;
+  const nro2 = document.getElementById("nro2").value;
+  const nro3 = document.getElementById("nro3").value;
 
+  const password = nro1 + nro2 + nro3;
+  const mensaje = document.getElementById("mensajeclave");
+ 
 
-
-    let value = document.querySelector ('#secret').value; 
-    
-    let parrafo = document.querySelector ('#secret-result');
-
-    if (value === 'Desafio Latam') { parrafo.innerHTML = 'Contraseña Correcta'
-
-    } else { 
-    parrafo.innerHTML = 'Contraseña incorrecta'
-    }
+  if (password === "911") {
+    mensaje.innerText = "Password 1 correcto";
+    mensaje.style.color = "blue";
+    mensaje.style.fontWeight = "bold";
+  } else if (password === "714") {
+    mensaje.innerText = "Password 2 correcto";
+    mensaje.style.color = "blue";
+    mensaje.style.fontWeight = "bold";
+  } else {
+    mensaje.innerText = "Password incorrecto";
+    mensaje.style.color = "red";
+    mensaje.style.fontWeight = "bold";
+  }
+}
